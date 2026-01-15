@@ -8,10 +8,10 @@ echo "========================================="
 echo ""
 
 # Check if running as pi user
-if [ "$USER" != "pi" ]; then
-    echo "ERROR: Please run this script as user 'pi'"
-    exit 1
-fi
+#if [ "$USER" != "pi" ]; then
+#    echo "ERROR: Please run this script as user 'pi'"
+ #   exit 1
+#fi
 
 # Update system
 echo "[1/8] Updating system packages..."
