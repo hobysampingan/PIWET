@@ -1,0 +1,15 @@
+[Unit]
+Description=Weather Display
+After=multi-user.target
+
+[Service]
+Type=forking
+User=root
+WorkingDirectory=/home/pi/weather
+Environment=SDL_FBDEV=/dev/fb1
+Environment=SDL_VIDEODRIVER=fbcon
+ExecStart=/bin/bash -c 'nohup /usr/bin/python3 -u /home/pi/weather/main.py > /dev/null 2>&1 &'
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
